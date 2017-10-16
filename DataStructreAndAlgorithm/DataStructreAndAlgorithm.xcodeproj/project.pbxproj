@@ -11,6 +11,9 @@
 		760E75A11F915DFB005924AF /* LinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E75A01F915DFB005924AF /* LinkedListTest.swift */; };
 		760E75A51F91C6F9005924AF /* SinglyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E75A41F91C6F9005924AF /* SinglyLinkedList.swift */; };
 		760E75A81F91C877005924AF /* StackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E75A71F91C877005924AF /* StackList.swift */; };
+		760E75AA1F939ED3005924AF /* StackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E75A91F939ED3005924AF /* StackTest.swift */; };
+		760E75AD1F939EF3005924AF /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E75AC1F939EF3005924AF /* Queue.swift */; };
+		760E75AF1F93A506005924AF /* QueueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E75AE1F93A506005924AF /* QueueList.swift */; };
 		7634EB331F1693E20054A1FA /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7634EB321F1693E20054A1FA /* BinaryTree.swift */; };
 		764500AA1F8E79BB006C257E /* DataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764500A91F8E79BB006C257E /* DataStructure.swift */; };
 		764500AC1F8E8CDC006C257E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764500AB1F8E8CDC006C257E /* Stack.swift */; };
@@ -39,6 +42,9 @@
 		760E75A01F915DFB005924AF /* LinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTest.swift; sourceTree = "<group>"; };
 		760E75A41F91C6F9005924AF /* SinglyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglyLinkedList.swift; sourceTree = "<group>"; };
 		760E75A71F91C877005924AF /* StackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackList.swift; sourceTree = "<group>"; };
+		760E75A91F939ED3005924AF /* StackTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTest.swift; sourceTree = "<group>"; };
+		760E75AC1F939EF3005924AF /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		760E75AE1F93A506005924AF /* QueueList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueList.swift; sourceTree = "<group>"; };
 		7634EB321F1693E20054A1FA /* BinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		764500A91F8E79BB006C257E /* DataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructure.swift; sourceTree = "<group>"; };
 		764500AB1F8E8CDC006C257E /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 				760E75981F915DD5005924AF /* DataStructreAndAlgorithmTests.swift */,
 				760E759A1F915DD5005924AF /* Info.plist */,
 				760E75A01F915DFB005924AF /* LinkedListTest.swift */,
+				760E75A91F939ED3005924AF /* StackTest.swift */,
 			);
 			path = DataStructreAndAlgorithmTests;
 			sourceTree = "<group>";
@@ -87,6 +94,15 @@
 				760E75A71F91C877005924AF /* StackList.swift */,
 			);
 			name = Stack;
+			sourceTree = "<group>";
+		};
+		760E75AB1F939EE4005924AF /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				760E75AC1F939EF3005924AF /* Queue.swift */,
+				760E75AE1F93A506005924AF /* QueueList.swift */,
+			);
+			name = Queue;
 			sourceTree = "<group>";
 		};
 		7634EB311F1693CB0054A1FA /* BinaryTree */ = {
@@ -132,6 +148,7 @@
 		767FD5591EFE5A330009E568 /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
+				760E75AB1F939EE4005924AF /* Queue */,
 				760E75A61F91C860005924AF /* Stack */,
 				7634EB311F1693CB0054A1FA /* BinaryTree */,
 				767FD55A1EFE5A3F0009E568 /* LinkedList */,
@@ -255,6 +272,7 @@
 			files = (
 				760E75A11F915DFB005924AF /* LinkedListTest.swift in Sources */,
 				760E75991F915DD5005924AF /* DataStructreAndAlgorithmTests.swift in Sources */,
+				760E75AA1F939ED3005924AF /* StackTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +287,8 @@
 				760E75A81F91C877005924AF /* StackList.swift in Sources */,
 				760E75A51F91C6F9005924AF /* SinglyLinkedList.swift in Sources */,
 				764500AC1F8E8CDC006C257E /* Stack.swift in Sources */,
+				760E75AF1F93A506005924AF /* QueueList.swift in Sources */,
+				760E75AD1F939EF3005924AF /* Queue.swift in Sources */,
 				767FD5481EFE59F40009E568 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

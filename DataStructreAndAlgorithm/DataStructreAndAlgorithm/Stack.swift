@@ -33,6 +33,10 @@ extension Stack{
     func isEmpty()->Bool{
         return count == 0
     }
+    
+    func peek() ->T?{
+        return top
+    }
 }
 
 /*
@@ -42,7 +46,6 @@ extension Stack{
  //Courtesy Answer from stackoverflow https://stackoverflow.com/questions/46748339/why-poplast-method-in-swift-array-has-complexity-on-if-the-array-is-bridged
  Array has copy-on-write semantics, i.e. when an array is mutated, it has to check whether it is the exclusive owner of its storage buffer. If there are other arrays sharing the buffer, the array has to make a copy before it can mutate the buffer.
  If an array is bridged from NSMutableArray (and possibly NSArray), it can't reliably determine if other owners exist on the Objective-C side, so it always has to make a copy. In other words, a bridged array is converted into a native Swift array on the first mutation, and that's an O(n) operation.
- 
  */
 class StackArray<T>: DataStructure,Stack {
     var count: Int = 0;

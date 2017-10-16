@@ -19,11 +19,6 @@ import Foundation
  
  */
 
-enum DSError:Error{
-    
-  
-
-}
 
 class LinkedListNode<T>:Node<T>{
     var value:T

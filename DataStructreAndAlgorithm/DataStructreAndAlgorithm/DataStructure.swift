@@ -20,9 +20,11 @@ class Node<T>:DataStructureNode{
 }
 
 enum DSError:Error{
-    case OperationOnEmptyListError;
+    case OperationOnEmptyListError
     case OutOfBound
-    case StackCannotPopFromEmptyStackError;
+    case StackCannotPopFromEmptyStackError
+    case InvalidOperationOnEmptyQueue
+
 
 }
 
