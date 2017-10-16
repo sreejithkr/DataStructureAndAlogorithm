@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import DataS
+@testable import DataStructureAndAlgorithm
 
 class LinkedListTest: XCTestCase {
     
