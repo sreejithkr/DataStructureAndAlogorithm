@@ -25,25 +25,36 @@ protocol Q{
     func dequeue() throws ->T;
 }
 
+extension Q{
+    
+    func throwInvalidOperationOnEmptyQueue() throws {
+        if(count == 0){
+            throw DSError.InvalidOperationOnEmptyQueue
+        }
+    }
+    func isEmpty()->Bool{
+        return count == 0
+    }
+}
 
 
 class Queue<T>: DataStructure,Q {
-    var count: Int = 0;
+    var count: Int = 0
     var top:T!
     var rear: T!
     private var queueArray:[T] = []
     func enqueue(value: T) {
-        
+        count += 1
+        queueArray.append(value)
+
     }
     func dequeue() throws -> T {
+        try throwInvalidOperationOnEmptyQueue()
+        count -= 1
+        let retVal = queueArray.removeFirst()
         if(count == 0){
-            throw DSError.InvalidOperationOnEmptyQueue
-        }
-        count -= 1;
-        let retVal = queueArray.removeFirst();
-        if(count == 0){
-            top = nil;
-            rear = nil;
+            top = nil
+            rear = nil
         }
         return retVal
     }

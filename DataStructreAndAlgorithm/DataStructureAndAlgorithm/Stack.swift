@@ -56,7 +56,6 @@ class StackArray<T>: DataStructure,Stack {
         try throwCannotPopError();
         count -= 1
         //O(*n*) is the complexity of the remove last operation
-        
         return valueHolderArray.popLast()!
         
     }

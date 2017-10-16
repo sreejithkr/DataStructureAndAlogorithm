@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		760E75961F915DD5005924AF /* DataStructreAndAlgorithmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructreAndAlgorithmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		760E75961F915DD5005924AF /* DataStructureAndAlgorithmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureAndAlgorithmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		760E75981F915DD5005924AF /* DataStructreAndAlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructreAndAlgorithmTests.swift; sourceTree = "<group>"; };
 		760E759A1F915DD5005924AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		760E75A01F915DFB005924AF /* LinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTest.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		7634EB321F1693E20054A1FA /* BinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		764500A91F8E79BB006C257E /* DataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructure.swift; sourceTree = "<group>"; };
 		764500AB1F8E8CDC006C257E /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		767FD5441EFE59F40009E568 /* DataStructreAndAlgorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructreAndAlgorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		767FD5441EFE59F40009E568 /* DataStructureAndAlgorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructureAndAlgorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		767FD5471EFE59F40009E568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		767FD5491EFE59F40009E568 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		767FD54C1EFE59F40009E568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		760E75971F915DD5005924AF /* DataStructreAndAlgorithmTests */ = {
+		760E75971F915DD5005924AF /* DataStructureAndAlgorithmTests */ = {
 			isa = PBXGroup;
 			children = (
 				760E75981F915DD5005924AF /* DataStructreAndAlgorithmTests.swift */,
@@ -84,7 +84,7 @@
 				760E75A01F915DFB005924AF /* LinkedListTest.swift */,
 				760E75A91F939ED3005924AF /* StackTest.swift */,
 			);
-			path = DataStructreAndAlgorithmTests;
+			path = DataStructureAndAlgorithmTests;
 			sourceTree = "<group>";
 		};
 		760E75A61F91C860005924AF /* Stack */ = {
@@ -116,8 +116,8 @@
 		767FD53B1EFE59F30009E568 = {
 			isa = PBXGroup;
 			children = (
-				767FD5461EFE59F40009E568 /* DataStructreAndAlgorithm */,
-				760E75971F915DD5005924AF /* DataStructreAndAlgorithmTests */,
+				767FD5461EFE59F40009E568 /* DataStructureAndAlgorithm */,
+				760E75971F915DD5005924AF /* DataStructureAndAlgorithmTests */,
 				767FD5451EFE59F40009E568 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,13 +125,13 @@
 		767FD5451EFE59F40009E568 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				767FD5441EFE59F40009E568 /* DataStructreAndAlgorithm.app */,
-				760E75961F915DD5005924AF /* DataStructreAndAlgorithmTests.xctest */,
+				767FD5441EFE59F40009E568 /* DataStructureAndAlgorithm.app */,
+				760E75961F915DD5005924AF /* DataStructureAndAlgorithmTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		767FD5461EFE59F40009E568 /* DataStructreAndAlgorithm */ = {
+		767FD5461EFE59F40009E568 /* DataStructureAndAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
 				767FD5591EFE5A330009E568 /* DataStructure */,
@@ -142,7 +142,7 @@
 				767FD5501EFE59F40009E568 /* LaunchScreen.storyboard */,
 				767FD5531EFE59F40009E568 /* Info.plist */,
 			);
-			path = DataStructreAndAlgorithm;
+			path = DataStructureAndAlgorithm;
 			sourceTree = "<group>";
 		};
 		767FD5591EFE5A330009E568 /* DataStructure */ = {
@@ -169,9 +169,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		760E75951F915DD5005924AF /* DataStructreAndAlgorithmTests */ = {
+		760E75951F915DD5005924AF /* DataStructureAndAlgorithmTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 760E759F1F915DD5005924AF /* Build configuration list for PBXNativeTarget "DataStructreAndAlgorithmTests" */;
+			buildConfigurationList = 760E759F1F915DD5005924AF /* Build configuration list for PBXNativeTarget "DataStructureAndAlgorithmTests" */;
 			buildPhases = (
 				760E75921F915DD5005924AF /* Sources */,
 				760E75931F915DD5005924AF /* Frameworks */,
@@ -182,14 +182,14 @@
 			dependencies = (
 				760E759C1F915DD5005924AF /* PBXTargetDependency */,
 			);
-			name = DataStructreAndAlgorithmTests;
+			name = DataStructureAndAlgorithmTests;
 			productName = DataStructreAndAlgorithmTests;
-			productReference = 760E75961F915DD5005924AF /* DataStructreAndAlgorithmTests.xctest */;
+			productReference = 760E75961F915DD5005924AF /* DataStructureAndAlgorithmTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		767FD5431EFE59F30009E568 /* DataStructreAndAlgorithm */ = {
+		767FD5431EFE59F30009E568 /* DataStructureAndAlgorithm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 767FD5561EFE59F40009E568 /* Build configuration list for PBXNativeTarget "DataStructreAndAlgorithm" */;
+			buildConfigurationList = 767FD5561EFE59F40009E568 /* Build configuration list for PBXNativeTarget "DataStructureAndAlgorithm" */;
 			buildPhases = (
 				767FD5401EFE59F30009E568 /* Sources */,
 				767FD5411EFE59F30009E568 /* Frameworks */,
@@ -199,9 +199,9 @@
 			);
 			dependencies = (
 			);
-			name = DataStructreAndAlgorithm;
+			name = DataStructureAndAlgorithm;
 			productName = DataStructreAndAlgorithm;
-			productReference = 767FD5441EFE59F40009E568 /* DataStructreAndAlgorithm.app */;
+			productReference = 767FD5441EFE59F40009E568 /* DataStructureAndAlgorithm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -226,7 +226,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 767FD53F1EFE59F30009E568 /* Build configuration list for PBXProject "DataStructreAndAlgorithm" */;
+			buildConfigurationList = 767FD53F1EFE59F30009E568 /* Build configuration list for PBXProject "DataStructureAndAlgorithm" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -239,8 +239,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				767FD5431EFE59F30009E568 /* DataStructreAndAlgorithm */,
-				760E75951F915DD5005924AF /* DataStructreAndAlgorithmTests */,
+				767FD5431EFE59F30009E568 /* DataStructureAndAlgorithm */,
+				760E75951F915DD5005924AF /* DataStructureAndAlgorithmTests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,7 +298,7 @@
 /* Begin PBXTargetDependency section */
 		760E759C1F915DD5005924AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 767FD5431EFE59F30009E568 /* DataStructreAndAlgorithm */;
+			target = 767FD5431EFE59F30009E568 /* DataStructureAndAlgorithm */;
 			targetProxy = 760E759B1F915DD5005924AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -345,7 +345,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataStructreAndAlgorithm.app/DataStructreAndAlgorithm";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataStructureAndAlgorithm.app/DataStructureAndAlgorithm";
 			};
 			name = Debug;
 		};
@@ -371,7 +371,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataStructreAndAlgorithm.app/DataStructreAndAlgorithm";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataStructureAndAlgorithm.app/DataStructureAndAlgorithm";
 			};
 			name = Release;
 		};
@@ -475,7 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8AG482YRX3;
-				INFOPLIST_FILE = DataStructreAndAlgorithm/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DataStructureAndAlgorithm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.srk.DataStructreAndAlgorithm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -488,7 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8AG482YRX3;
-				INFOPLIST_FILE = DataStructreAndAlgorithm/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DataStructureAndAlgorithm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.srk.DataStructreAndAlgorithm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -499,7 +499,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		760E759F1F915DD5005924AF /* Build configuration list for PBXNativeTarget "DataStructreAndAlgorithmTests" */ = {
+		760E759F1F915DD5005924AF /* Build configuration list for PBXNativeTarget "DataStructureAndAlgorithmTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				760E759D1F915DD5005924AF /* Debug */,
@@ -508,7 +508,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		767FD53F1EFE59F30009E568 /* Build configuration list for PBXProject "DataStructreAndAlgorithm" */ = {
+		767FD53F1EFE59F30009E568 /* Build configuration list for PBXProject "DataStructureAndAlgorithm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				767FD5541EFE59F40009E568 /* Debug */,
@@ -517,7 +517,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		767FD5561EFE59F40009E568 /* Build configuration list for PBXNativeTarget "DataStructreAndAlgorithm" */ = {
+		767FD5561EFE59F40009E568 /* Build configuration list for PBXNativeTarget "DataStructureAndAlgorithm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				767FD5571EFE59F40009E568 /* Debug */,
