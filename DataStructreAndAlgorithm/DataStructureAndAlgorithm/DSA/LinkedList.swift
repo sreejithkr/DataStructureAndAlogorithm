@@ -84,27 +84,44 @@ class LinkedList<T>:DataStructure{
  
     }
     
-    func insert(value:T,at index:Int) throws{
+    func insert(value:T,at index:UInt) throws{
         let node = LinkedListNode<T>(value);
         node.value = value;
         try insert(node: node, at: index)
         
     }
-    func insert(node:LinkedListNode<T>,at index:Int) throws{
+    func insert(node:LinkedListNode<T>,at index:UInt) throws{
         var position:Int = 0;
         if(count+1 < index){
             throw DSError.OutOfBound
         }
         if let _ = head{
-            var current:LinkedListNode<T>! = head;
+            var current:LinkedListNode<T>! = head
             
-            while (current.next != nil || position == index){
-                current = current.next;
-                position += 1
+            if(index == 0){
+               self.addFirst(node: node)
+                return
             }
-            
-            current.next = node;
-            node.prev = current
+            else{
+                var insertPrevVal:LinkedListNode<T>! = nil;
+                while (current.next != nil ){
+                    position += 1
+                    if(position == index){
+                       insertPrevVal = current.next
+                    }
+                    current = current.next
+
+                }
+                if let temp = insertPrevVal{
+                    insertPrevVal.next = node
+                    node.next = temp
+                    node.prev = current
+                }
+                
+                
+            }
+           
+           
         }else{
             
             head = node;
@@ -136,7 +153,7 @@ class LinkedList<T>:DataStructure{
         return temp;
         
     }
-    func removeFirst() throws ->LinkedListNode<T>!{
+    @discardableResult func removeFirst() throws ->LinkedListNode<T>!{
         if(count == 0 || head == nil || tail == nil){
             throw DSError.OperationOnEmptyListError
         }
@@ -153,7 +170,34 @@ class LinkedList<T>:DataStructure{
         }
         return temp;
     }
-    
+    @discardableResult func remove(value:LinkedListNode<T>)throws ->LinkedListNode<T>!{
+        if(count == 0 || head == nil || tail == nil){
+           throw DSError.OperationOnEmptyListError
+        }
+        var currentNode:LinkedListNode<T>! = head
+        while (currentNode.next != nil) {
+            if(currentNode === value){
+                var tempVal = currentNode.next
+                currentNode.next = currentNode.next.next
+                currentNode.next.prev = currentNode
+                tempVal?.prev = nil
+                tempVal?.next = nil
+                count -= 1
+                return tempVal;
+            }
+            currentNode = currentNode.next
+        }
+        return nil
+    }
+//    @discardableResult func remove(at index:Int)throws ->LinkedListNode<T>!{
+//        if(count == 0 || head == nil || tail == nil){
+//            throw DSError.OperationOnEmptyListError
+//        }
+//        let temp:LinkedListNode<T>!;
+//
+//
+//        return temp;
+//    }
     
     
 }

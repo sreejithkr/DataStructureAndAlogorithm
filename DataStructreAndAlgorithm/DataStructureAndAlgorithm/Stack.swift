@@ -50,7 +50,8 @@ extension Stack{
 class StackArray<T>: DataStructure,Stack {
     var count: Int = 0;
     var top: T!
-    
+    private var valueHolderArray = [T]();
+
     //total complexity will be O(n)
     func pop() throws -> T {
         try throwCannotPopError();
@@ -59,9 +60,6 @@ class StackArray<T>: DataStructure,Stack {
         return valueHolderArray.popLast()!
         
     }
-    
-    
-    private var valueHolderArray = [T]();
     
     func push(value:T){
         top = value

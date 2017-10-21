@@ -44,7 +44,6 @@ class LinkedListTest: XCTestCase {
     }
     
     func testAddFirst(){
-        var currentCount = linkedList.count;
         linkedList.addFirst(node: LinkedListNode<Int>(8))
         XCTAssertNotNil(linkedList.head)
         XCTAssertNotNil(linkedList.tail)
@@ -53,6 +52,43 @@ class LinkedListTest: XCTestCase {
         XCTAssertFalse(linkedList.head === linkedList.tail)
         linkedList.addFirst(node: LinkedListNode<Int>(9))
         XCTAssert(linkedList.count == 3)
+    }
+    func testInsert(){
+        var currentCount:Int = linkedList.count;
+        do {
+            try linkedList.insert(node: LinkedListNode<Int>(9), at: 0)
+        }catch{
+            
+        }
+        currentCount = linkedList.count;
+        XCTAssert(currentCount == 1)
+        do {
+           try linkedList.insert(node: LinkedListNode<Int>(19), at: 1)
+        }catch{
+            
+        }
+        currentCount = linkedList.count;
+        XCTAssert(currentCount == 2)
+        do {
+            try linkedList.insert(node: LinkedListNode<Int>(23), at: 5)
+        }catch(DSError.OutOfBound){
+            XCTAssert(true)
+        }catch{
+            XCTAssert(false)
+        }
+        do {
+            try linkedList.insert(node: LinkedListNode<Int>(1), at: 0)
+        }catch{
+            
+        }
+        
+        XCTAssert(currentCount+1 == linkedList.count)
+        currentCount = linkedList.count;
+        XCTAssert(linkedList.head.value == 1)
+
+    }
+    func testRemove(){
+        
     }
     func testPerformanceExample() {
         // This is an example of a performance test case.
