@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HashTable<K,V> where K:Hashable {
+class HashTable<K,V>:DataStructure where K:Hashable {
     class HashTableNode{
         var key:K
         var hashTableItemValue:V
@@ -19,10 +19,22 @@ class HashTable<K,V> where K:Hashable {
         
     }
     
+    
     private var capacity:Int
+    var count:Int = 0
     init(capacity:UInt){
         self.capacity = Int(capacity)
-        hashTableDataHolderArray = [LinkedList<HashTableNode>](repeatElement(LinkedList<HashTableNode>(), count: self.capacity))
+        hashTableDataHolderArray = []
+       // let arr:Repeated<LinkedList<HashTableNode>> = repeatElement(LinkedList<HashTableNode>(), count: Int(capacity))
+       // hashTableDataHolderArray.append(contentsOf: arr);
+        // Array<LinkedList<HashTableNode>>()
+    
+        var ct = 0;
+        repeat{
+            hashTableDataHolderArray.append(LinkedList<HashTableNode>());
+            ct += 1
+        }while(ct < capacity)
+      
     }
     
     private var hashTableDataHolderArray:[LinkedList<HashTableNode>]
@@ -43,8 +55,9 @@ class HashTable<K,V> where K:Hashable {
         }
         return nil;
     }
-    private func replaceOrInsertValueForKeyInLinkedList(key:K,list:LinkedList<HashTableNode>,value:V){
+    private func replaceOrInsertValueForKeyInLinkedList(key:K, list:inout LinkedList<HashTableNode>,value:V){
         guard var currentNode = list.head else{
+            count += 1
          list.addFirst(value: HashTableNode(key,value));
          return
         }
@@ -62,15 +75,19 @@ class HashTable<K,V> where K:Hashable {
         }
         
         list.addLast(value: HashTableNode(key,value))
+        count += 1
+
     }
     
-    private func removeValueForKeyInLinkedList(key:K,list:LinkedList<HashTableNode>){
+    private func removeValueForKeyInLinkedList(key:K, list:inout LinkedList<HashTableNode>){
         guard var currentNode = list.head else{
             return
         }
         if(currentNode.value.key == key){
             if(list.count > 0){
                 try! list.removeFirst()
+                count -= 1
+
             }
             return
         }
@@ -81,6 +98,7 @@ class HashTable<K,V> where K:Hashable {
             if(hashNode.key == key){
                 do{
                     try  list.remove(value: currentNode)
+                    count -= 1
                 }catch{
                     
                 }
@@ -93,13 +111,37 @@ class HashTable<K,V> where K:Hashable {
     }
     
     func insert(value:V,forKey key:K){
-        let list = hashTableDataHolderArray[findPositionForKey(key: key)]
-        replaceOrInsertValueForKeyInLinkedList(key: key, list: list, value: value)
+        var list = hashTableDataHolderArray[findPositionForKey(key: key)]
+        replaceOrInsertValueForKeyInLinkedList(key: key,  list: &list, value: value)
+        hashTableDataHolderArray[findPositionForKey(key: key)] = list;
     }
     
     func remove(valueForKey key:K){
+        var list = hashTableDataHolderArray[findPositionForKey(key: key)]
+         removeValueForKeyInLinkedList(key: key, list: &list)
+    }
+    
+    func get(valueForKey key:K)->V!{
         let list = hashTableDataHolderArray[findPositionForKey(key: key)]
-         removeValueForKeyInLinkedList(key: key, list: list)
+        if(list.count == 0){
+            return nil;
+        }else if(list.count == 1){
+            if(list.head.value.key == key){
+                return list.head.value.hashTableItemValue
+            }
+        }else{
+            var currentval = list.head;
+            while(currentval?.next != nil){
+                
+                currentval = currentval?.next;
+                if(currentval!.value.key == key){
+                    return currentval?.value.hashTableItemValue
+                }
+            }
+            
+        }
+        return nil
+
     }
     
     

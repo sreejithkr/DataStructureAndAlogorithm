@@ -35,7 +35,7 @@ class BinaryTreeNode<T>:Node<T>{
     }
 }
 
-class  BinaryTree<T> {
+class  BinaryTree<T>:DataStructure {
     
     var root:BinaryTreeNode<T>;
     

@@ -102,6 +102,10 @@ class LinkedList<T>:DataStructure{
                self.addFirst(node: node)
                 return
             }
+            else if(index == count){
+                self.addLast(node: node)
+                return
+            }
             else{
                 var insertPrevVal:LinkedListNode<T>! = nil;
                 while (current.next != nil ){
@@ -132,7 +136,7 @@ class LinkedList<T>:DataStructure{
 
     }
     
-    func removeLast() throws ->LinkedListNode<T>!{
+    @discardableResult func removeLast() throws ->LinkedListNode<T>!{
         
         if(count == 0 || head == nil || tail == nil){
             throw DSError.OperationOnEmptyListError
@@ -168,25 +172,48 @@ class LinkedList<T>:DataStructure{
             head.prev =  nil;
             temp.next = nil;
         }
+        count -= 1
+
         return temp;
     }
     @discardableResult func remove(value:LinkedListNode<T>)throws ->LinkedListNode<T>!{
         if(count == 0 || head == nil || tail == nil){
            throw DSError.OperationOnEmptyListError
         }
+        
+        if(head === value){
+            return try self.removeFirst()
+        }
+        if(tail === value){
+            return try self.removeLast()
+        }
         var currentNode:LinkedListNode<T>! = head
-        while (currentNode.next != nil) {
+       
+        while (currentNode != nil) {
             if(currentNode === value){
-                var tempVal = currentNode.next
-                currentNode.next = currentNode.next.next
-                currentNode.next.prev = currentNode
+                var tempVal = currentNode
+                currentNode.prev?.next = currentNode.next
                 tempVal?.prev = nil
                 tempVal?.next = nil
                 count -= 1
-                return tempVal;
+                return tempVal
             }
-            currentNode = currentNode.next
+            currentNode = currentNode.next;
+            
         }
+        
+//        while (currentNode.next != nil) {
+//            if(currentNode === value){
+//                var tempVal = currentNode.next
+//                currentNode.next = currentNode.next.next
+//                currentNode.next.prev = currentNode
+//                tempVal?.prev = nil
+//                tempVal?.next = nil
+//                count -= 1
+//                return tempVal;
+//            }
+//            currentNode = currentNode.next
+//        }
         return nil
     }
 //    @discardableResult func remove(at index:Int)throws ->LinkedListNode<T>!{
