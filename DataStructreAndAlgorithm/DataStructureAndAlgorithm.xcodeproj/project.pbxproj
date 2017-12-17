@@ -17,9 +17,12 @@
 		760E75AF1F93A506005924AF /* QueueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E75AE1F93A506005924AF /* QueueList.swift */; };
 		762563B51F952179009D1EF4 /* LinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E75A01F915DFB005924AF /* LinkedListTest.swift */; };
 		762D32651F9E67D6007AB27D /* HashTableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762D32641F9E67D6007AB27D /* HashTableTest.swift */; };
-		7634EB331F1693E20054A1FA /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7634EB321F1693E20054A1FA /* BinaryTree.swift */; };
+		763167161FC7274B00072356 /* BinarySearchTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763167151FC7274B00072356 /* BinarySearchTreeTest.swift */; };
+		7634EB331F1693E20054A1FA /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7634EB321F1693E20054A1FA /* BinarySearchTree.swift */; };
 		764500AA1F8E79BB006C257E /* DataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764500A91F8E79BB006C257E /* DataStructure.swift */; };
 		764500AC1F8E8CDC006C257E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764500AB1F8E8CDC006C257E /* Stack.swift */; };
+		765F1FA01FD8E67F00C9CA00 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765F1F9F1FD8E67F00C9CA00 /* Sort.swift */; };
+		765F1FA21FD8EBA500C9CA00 /* SortTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765F1FA11FD8EBA500C9CA00 /* SortTest.swift */; };
 		767FD5481EFE59F40009E568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FD5471EFE59F40009E568 /* AppDelegate.swift */; };
 		767FD54A1EFE59F40009E568 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FD5491EFE59F40009E568 /* HomeViewController.swift */; };
 		767FD54D1EFE59F40009E568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767FD54B1EFE59F40009E568 /* Main.storyboard */; };
@@ -52,9 +55,12 @@
 		760E75AC1F939EF3005924AF /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		760E75AE1F93A506005924AF /* QueueList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueList.swift; sourceTree = "<group>"; };
 		762D32641F9E67D6007AB27D /* HashTableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTableTest.swift; sourceTree = "<group>"; };
-		7634EB321F1693E20054A1FA /* BinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		763167151FC7274B00072356 /* BinarySearchTreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeTest.swift; sourceTree = "<group>"; };
+		7634EB321F1693E20054A1FA /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		764500A91F8E79BB006C257E /* DataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructure.swift; sourceTree = "<group>"; };
 		764500AB1F8E8CDC006C257E /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		765F1F9F1FD8E67F00C9CA00 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		765F1FA11FD8EBA500C9CA00 /* SortTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortTest.swift; sourceTree = "<group>"; };
 		767FD5441EFE59F40009E568 /* DataStructureAndAlgorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructureAndAlgorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		767FD5471EFE59F40009E568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		767FD5491EFE59F40009E568 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +107,8 @@
 				760E75A91F939ED3005924AF /* StackArrayTest.swift */,
 				760AA3F81F981EEA00B2BFAF /* SearchTest.swift */,
 				762D32641F9E67D6007AB27D /* HashTableTest.swift */,
+				763167151FC7274B00072356 /* BinarySearchTreeTest.swift */,
+				765F1FA11FD8EBA500C9CA00 /* SortTest.swift */,
 			);
 			path = DataStructureAndAlgorithmTests;
 			sourceTree = "<group>";
@@ -126,7 +134,7 @@
 		7634EB311F1693CB0054A1FA /* BinaryTree */ = {
 			isa = PBXGroup;
 			children = (
-				7634EB321F1693E20054A1FA /* BinaryTree.swift */,
+				7634EB321F1693E20054A1FA /* BinarySearchTree.swift */,
 			);
 			name = BinaryTree;
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				76AD9D2F1F97058B00060C58 /* Search.swift */,
+				765F1F9F1FD8E67F00C9CA00 /* Sort.swift */,
 			);
 			name = "Search&Sort";
 			sourceTree = "<group>";
@@ -309,9 +318,11 @@
 			files = (
 				760E75991F915DD5005924AF /* DataStructreAndAlgorithmTests.swift in Sources */,
 				760AA3F91F981EEA00B2BFAF /* SearchTest.swift in Sources */,
+				763167161FC7274B00072356 /* BinarySearchTreeTest.swift in Sources */,
 				760E75AA1F939ED3005924AF /* StackArrayTest.swift in Sources */,
 				762563B51F952179009D1EF4 /* LinkedListTest.swift in Sources */,
 				762D32651F9E67D6007AB27D /* HashTableTest.swift in Sources */,
+				765F1FA21FD8EBA500C9CA00 /* SortTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76AD9D301F97058B00060C58 /* Search.swift in Sources */,
-				7634EB331F1693E20054A1FA /* BinaryTree.swift in Sources */,
+				7634EB331F1693E20054A1FA /* BinarySearchTree.swift in Sources */,
 				767FD55C1EFE5A6E0009E568 /* LinkedList.swift in Sources */,
 				764500AA1F8E79BB006C257E /* DataStructure.swift in Sources */,
 				767FD54A1EFE59F40009E568 /* HomeViewController.swift in Sources */,
@@ -331,6 +342,7 @@
 				760E75AD1F939EF3005924AF /* Queue.swift in Sources */,
 				760AA3FC1F983AF800B2BFAF /* HashTable.swift in Sources */,
 				767FD5481EFE59F40009E568 /* AppDelegate.swift in Sources */,
+				765F1FA01FD8E67F00C9CA00 /* Sort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

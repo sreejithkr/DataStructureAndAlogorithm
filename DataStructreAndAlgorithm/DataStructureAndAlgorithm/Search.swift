@@ -15,7 +15,7 @@ enum SortOrder{
 class Search<T> where T:Comparable{
     
     //using recursion
-    class func binarySearch(searchArray:[T],item:T,order:SortOrder = .Assending)->Bool{
+    class func binarySearchRecursive(searchArray:[T],item:T,order:SortOrder = .Assending)->Bool{
         let length = searchArray.count;
         
         if(length == 0){
@@ -28,20 +28,65 @@ class Search<T> where T:Comparable{
         
         if(searchArray[midIndex] > item){
             if(order == .Assending){
-                return Search.binarySearch(searchArray: Array(searchArray[0..<midIndex]), item: item, order:order)
+                return Search.binarySearchRecursive(searchArray: Array(searchArray[0..<midIndex]), item: item, order:order)
             }else{
-                return Search.binarySearch(searchArray: Array(searchArray[midIndex..<length]), item: item, order:order)
+                return Search.binarySearchRecursive(searchArray: Array(searchArray[midIndex..<length]), item: item, order:order)
 
             }
         }else{
             if(order == .Assending){
-                return Search.binarySearch(searchArray: Array(searchArray[midIndex..<length]), item: item, order:order)
+                return Search.binarySearchRecursive(searchArray: Array(searchArray[midIndex..<length]), item: item, order:order)
 
             }else{
-                return Search.binarySearch(searchArray: Array(searchArray[0..<midIndex]), item: item, order:order)
+                return Search.binarySearchRecursive(searchArray: Array(searchArray[0..<midIndex]), item: item, order:order)
             }
         }
         
-        return true;
+    }
+    
+    class func binarySearch(searchArray:[T],item:T,order:SortOrder = .Assending)->Bool{
+        var searchArray:[T] = searchArray;
+        var length = searchArray.count;
+
+        if(length == 0){
+            return false;
+        }
+      
+        while(searchArray.count != 0){
+            length = searchArray.count;
+            let midIndex = length/2;
+            if(searchArray[midIndex] == item){
+                return true;
+            }
+            if(length == 1){
+                return searchArray[0] == item
+            }
+            if(searchArray[midIndex] > item){
+                if(order == .Assending){
+                    
+                    searchArray = Array(searchArray[0..<midIndex]);
+                    continue;
+                }else{
+                    searchArray = Array(searchArray[midIndex..<length]);
+                    continue;
+                    
+                }
+            }else{
+                if(order == .Assending){
+                    searchArray = Array(searchArray[midIndex..<length]);
+                    continue;
+                   
+                    
+                }else{
+                    searchArray = Array(searchArray[0..<midIndex]);
+                    continue;
+                    
+                }
+            }
+        }
+        
+        
+        
+        return false;
     }
 }
